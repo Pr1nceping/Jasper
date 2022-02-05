@@ -16,14 +16,14 @@ ListNode* Solution::BuildFromXToY(int X, int Y) {
         head = new ListNode;
         head->value = X;
         temp=head;
-
         for (int i = X; i <= Y; i++) {
             newnode = new ListNode;
-            newnode->value=i;
+            newnode->value=i+1;
             temp->next=newnode;
             temp=temp->next;
         }
         newnode->next = nullptr;
+        return head;
     }
     else{
          return nullptr;
