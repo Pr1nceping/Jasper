@@ -12,24 +12,26 @@ ListNode* Solution::BuildFromXToY(int X, int Y) {
     ListNode* head;
     ListNode* newnode;
     ListNode* temp;
-    if(Y>X) {
+    if(Y>=X) {
         head = new ListNode;
         head->value = X;
-        temp=head;
-        for (int i = X; i <= Y; i++) {
-            newnode = new ListNode;
-            newnode->value=i+1;
-            temp->next=newnode;
-            temp=temp->next;
+        head->next = nullptr;
+        temp = head;
+        if (X != Y) {
+            for (int i = X; i <= Y; i++) {
+                newnode = new ListNode;
+                newnode->value = i + 1;
+                temp->next = newnode;
+                temp = temp->next;
+            }
+            newnode->next = nullptr;
         }
-        newnode->next = nullptr;
         return head;
     }
     else{
          return nullptr;
     }
 }
-
 int Solution::CountLength(ListNode *head) {
     //TODO: Task 3 Please insert your code here
     return -1;
