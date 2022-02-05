@@ -14,7 +14,17 @@ ListNode* Solution::BuildFromXToY(int X, int Y) {
     ListNode* newnode;
     ListNode* temp;
     if(Y>X) {
-        
+        head = new ListNode;
+        head->value = X;
+        tail->value = Y;
+
+        for (int i = X; i <= tail->value; i++) {
+            newnode = new ListNode;
+            newnode->next->value=X+i;
+            temp->next=newnode;
+            temp=temp->next;
+        }
+        newnode->next = nullptr;
     }
     else{
          return nullptr;
