@@ -18,9 +18,9 @@ ListNode* Solution::BuildFromXToY(int X, int Y) {
         head->value = X;
         tail->value = Y;
 
-        for (int i = X; i <= tail->value; i++) {
+        for (int i = X; i <= Y; i++) {
             newnode = new ListNode;
-            newnode->value=X+i;
+            newnode->value=i;
             temp->next=newnode;
             temp=temp->next;
         }
