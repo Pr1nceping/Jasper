@@ -20,7 +20,7 @@ ListNode* Solution::BuildFromXToY(int X, int Y) {
 
         for (int i = X; i <= tail->value; i++) {
             newnode = new ListNode;
-            newnode->next->value=X+i;
+            newnode->value=X+i;
             temp->next=newnode;
             temp=temp->next;
         }
