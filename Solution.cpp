@@ -10,13 +10,12 @@
 ListNode* Solution::BuildFromXToY(int X, int Y) {
     //TODO: Task 2 Please insert your code here
     ListNode* head;
-    ListNode* tail;
     ListNode* newnode;
     ListNode* temp;
     if(Y>X) {
         head = new ListNode;
         head->value = X;
-        tail->value = Y;
+        temp=head;
 
         for (int i = X; i <= Y; i++) {
             newnode = new ListNode;
